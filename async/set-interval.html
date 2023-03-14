@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval</title>
+</head>
+<body>
+    <h1 id="tes"></h1>
+    <h1 id="tes2"></h1>
+    <script>
+        function addElement1() {
+var today = new Date();
+var minute = today.getMinutes();
+var second = today.getSeconds();
+var tes = minute + ":" + second;
+            const header = document.getElementById("tes");
+if (today.getMinutes() == 53) {
+    const header2 = document.getElementById("tes2");
+    header2.textContent = "tes";
+
+
+} else{
+    const header2 = document.getElementById("tes2");
+    header2.textContent = "lol";
+}
+            header.textContent = tes;
+            
+        }
+ 
+        setInterval(addElement1, 1000);
+
+    </script>
+</body>
+</html>

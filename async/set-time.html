@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contoh Menampilkan Jam dan Hari dengan JavaScript</title>
+</head>
+<body>
+
+  <h1>Contoh Menampilkan Jam dan Hari dengan JavaScript</h1>
+
+  <!-- Membuat elemen untuk menampilkan jam -->
+  <div id="jam"></div>
+
+  <!-- Membuat elemen untuk menampilkan hari -->
+  <div id="hari"></div>
+
+  <!-- Memuat script JavaScript -->
+  <script>
+    // Membuat objek Date
+    var today = new Date();
+
+    // Mendapatkan jam, menit, dan detik
+    var hours = today.getHours();
+    var minutes = today.getMinutes();
+    var seconds = today.getSeconds();
+
+    // Mendapatkan hari, bulan, dan tahun
+    var day = today.getDate();
+    var month = today.getMonth() + 1; // Ingat: JavaScript mengindeks bulan mulai dari 0
+    var year = today.getFullYear();
+
+    // Menampilkan waktu dan tanggal dalam format yang diinginkan
+    document.getElementById("jam").innerHTML = "Jam sekarang adalah " + hours + ":" + minutes + ":" + seconds + ".";
+    document.getElementById("hari").innerHTML = "Hari ini adalah " + day + "/" + month + "/" + year + ".";
+  </script>
+
+</body>
+</html>
